@@ -1,36 +1,12 @@
-# Welcome to Remix!
+# Repo with repo of unstable useId in Remix 2.4.X
 
-- [Remix Docs](https://remix.run/docs)
+- Install dependencies with pnpm
+- Run the app: `pnpm dev`
+- Open the devtools and look at the console
+- Navigate to the bug route: [http:.//localhost:3000](http://localhost:3000/bug)
 
-## Development
+> Note, the issue seems to only happen in a file that uses `useId`, `useFetcher` and includes a component that itself uses `useId`
 
-Start the Remix development asset server and the Express server by running:
+Notice the hydration issue
 
-```sh
-npm run dev
-```
-
-This starts your app in development mode, which will purge the server require cache when Remix rebuilds assets so you don't need a process manager restarting the express server.
-
-## Deployment
-
-First, build your app for production:
-
-```sh
-npm run build
-```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying express applications you should be right at home just make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
+![image](https://github.com/Phoenixmatrix/remix-unstable-useid/assets/1071928/5f55182e-c87a-4093-b6b8-0a4c23f95d7e)
